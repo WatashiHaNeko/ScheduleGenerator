@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v1
       - run: "npm install"
       - run: "node ./generator.js"
+      - run: "rm .gitignore"
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
